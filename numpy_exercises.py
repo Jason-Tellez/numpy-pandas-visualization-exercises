@@ -188,3 +188,42 @@ np.dot(cc, cc)
 (cc * cc.transpose()).prod()
 
 
+
+## Setup 4
+d = [
+    [90, 30, 45, 0, 120, 180],
+    [45, -90, -30, 270, 90, 0],
+    [60, 45, -45, 90, -45, 180]
+]
+
+dd = np.array(d)
+
+# Exercise 1 - Find the sine of all the numbers in d
+np.sin(dd)
+
+# Exercise 2 - Find the cosine of all the numbers in d
+np.cos(dd)
+
+# Exercise 3 - Find the tangent of all the numbers in d
+np.tan(dd)
+
+# Exercise 4 - Find all the negative numbers in d
+dd[dd < 0]
+
+# Exercise 5 - Find all the positive numbers in d
+dd[dd > 0]
+
+# Exercise 6 - Return an array of only the unique numbers in d.
+np.unique(dd)
+
+# Exercise 7 - Determine how many unique numbers there are in d.
+len(np.unique(dd))
+
+# Exercise 8 - Print out the shape of d.
+dd.shape
+
+# Exercise 9 - Transpose and then print out the shape of d.
+print(dd.transpose())
+
+# Exercise 10 - Reshape d into an array of 9 x 2
+dd.reshape(9, 2)
