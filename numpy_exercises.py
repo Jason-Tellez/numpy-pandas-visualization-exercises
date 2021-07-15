@@ -12,7 +12,7 @@ x = a[a > 0]
 len(x[x % 2 == 0])
 
 # 4. If you were to add 3 to each data point, how many positive numbers would there be?
-np.count_nonzero(a + 3 > 0)
+len(a[(a + 3) > 0])
 
 # 5. If you squared each number, what would the new mean and standard deviation be?
 b = a ** 2
@@ -147,3 +147,44 @@ bb.reshape((1,6))
 
 # Exercise 12 - reshape the array b to be a list of 6 lists, each containing only 1 number (6 x 1)
 bb.reshape((6,1))
+
+
+
+## Setup 3
+c = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+cc = np.array(c)
+
+# HINT, you'll first need to make sure that the "c" variable is a numpy array prior to using numpy array methods.
+# Exercise 1 - Find the min, max, sum, and product of c.
+cc.min()
+cc.max()
+cc.sum()
+cc.prod()
+
+# Exercise 2 - Determine the standard deviation of c.
+cc.std()
+
+# Exercise 3 - Determine the variance of c.
+cc.var()
+
+# Exercise 4 - Print out the shape of the array c
+cc.shape
+
+# Exercise 5 - Transpose c and print out transposed result.
+print(cc.transpose())
+
+# Exercise 6 - Get the dot product of the array c with c. 
+np.dot(cc, cc)
+
+# Exercise 7 - Write the code necessary to sum up the result of c times c transposed. Answer should be 261
+(cc * cc.transpose()).sum()
+
+# Exercise 8 - Write the code necessary to determine the product of c times c transposed. Answer should be 131681894400.
+(cc * cc.transpose()).prod()
+
+
